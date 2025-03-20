@@ -9,5 +9,5 @@ In this repository you will find...
 To run this snippet place the following code at your desired location on you your product page.
 
 ```sh
-{% render 'sale-badge' }}
+{% render 'sale-badge' %}
 ```
