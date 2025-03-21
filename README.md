@@ -25,13 +25,14 @@ This app is built using:
 
 ### Installation
 1. Populate your **.env** file with the following values:
-| Variable   | Value  | Example | 
-|--------------|---------|---------|
-| `SHOPIFY_STORE_URL` | Your store url | `my-store`.myshopify.com |
-| `SHOPIFY_ACCESS_TOKEN` | Your shopify app's access token | `...` |
-| `API_SECRET` | Your app's api secret | `...` |
-| `PORT` | The port you want to run this application on locally | `3000` |
-| `VARIANT_ID` | The id of the variant you would like to check against | *gid://shopify/ProductVariant/*`56935439270237` |
+| Variable               | Value                                              | Example                              |
+|------------------------|----------------------------------------------------|--------------------------------------|
+| `SHOPIFY_STORE_URL`     | Your store url                                     | `my-store.myshopify.com`             |
+| `SHOPIFY_ACCESS_TOKEN`  | Your Shopify app's access token                   | `...`                                |
+| `API_SECRET`            | Your app's API secret                              | `...`                                |
+| `PORT`                  | The port you want to run this application on locally | `3000`                               |
+| `VARIANT_ID`            | The ID of the variant you would like to check against | `gid://shopify/ProductVariant/56935439270237` |
+
 2. `cd` into `node app`
 3. run `npm i` to install all dependencies
 4. run `npm run dev` to run the app in dev mode
