@@ -25,6 +25,7 @@ This app is built using:
 
 ### Installation
 1. Populate your **.env** file with the following values:
+
 | Variable               | Value                                              | Example                              |
 |------------------------|----------------------------------------------------|--------------------------------------|
 | `SHOPIFY_STORE_URL`     | Your store url                                     | `my-store.myshopify.com`             |
@@ -48,7 +49,7 @@ This app is is an extension of *task-2*
 
 ### Setup
 1. Add the following values to your **.env** file: 
-| Variable   | Value  | Example | 
+| Variable   | Value  | Example |
 |--------------|---------|---------|
 | `EMAIL_HOST` | Your email host | `smtp.gmail.com` |
 | `EMAIL_PORT` | Your email port setting | `465` |
