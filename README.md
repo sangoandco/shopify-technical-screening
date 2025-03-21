@@ -48,7 +48,8 @@ This app is built using:
 This app is is an extension of *task-2*
 
 ### Setup
-1. Add the following values to your **.env** file: 
+1. Add the following values to your **.env** file:
+
 | Variable   | Value  | Example |
 |--------------|---------|---------|
 | `EMAIL_HOST` | Your email host | `smtp.gmail.com` |
@@ -56,6 +57,7 @@ This app is is an extension of *task-2*
 | `EMAIL_USER_NAME` | The email Sender's name | `John Peters` |
 | `EMAIL_USER_ADDRESS` | Your email address | `john@snowmail.com` |
 | `EMAIL_USER_PASSWORD` | Your email's password | `H*tWater!` |
+
 2. Start your development server and connect to a tunneling service to gain access to `https`
 3. Once you have your **url**; navigate to `settings > notifications > webhooks > create webhook`.
     1. **event** = `product update`
