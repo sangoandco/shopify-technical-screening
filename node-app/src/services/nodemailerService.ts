@@ -1,10 +1,10 @@
 import 'dotenv/config';
 import { transporter } from "../config/nodemailerConfig";
+import { getEnvVar } from "../utils/envGetter.js";
+import { logger } from '../utils/logger.js';
 
-const {
-    EMAIL_USER_NAME,
-    EMAIL_USER_ADDRESS,
-} = process.env;
+const EMAIL_USER_NAME = getEnvVar("EMAIL_USER_NAME");
+const EMAIL_USER_ADDRESS = getEnvVar("EMAIL_USER_ADDRESS");
 
 export async function triggerEmail(currentPrice: number, newPrice: number, percentageDifference: number, title: string) {
     const info = await transporter.sendMail({
@@ -21,5 +21,5 @@ export async function triggerEmail(currentPrice: number, newPrice: number, perce
         `,
     });
   
-    console.log("Message sent: %s", info.messageId);
+    logger.info("Message sent: %s", info.messageId);
   }

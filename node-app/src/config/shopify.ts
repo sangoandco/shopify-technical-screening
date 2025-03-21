@@ -1,16 +1,11 @@
 import { shopifyApi, LATEST_API_VERSION } from '@shopify/shopify-api';
 import { restResources } from '@shopify/shopify-api/rest/admin/2023-04';
 import 'dotenv/config';
+import { getEnvVar } from "../utils/envGetter.js";
 
-const {
-    API_SECRET,
-    SHOPIFY_STORE_URL,
-    SHOPIFY_ACCESS_TOKEN
-} = process.env;
-
-if (!API_SECRET || !SHOPIFY_STORE_URL || !SHOPIFY_ACCESS_TOKEN) {
-    throw new Error("Missing required Shopify environment variables");
-}
+const API_SECRET = getEnvVar("API_SECRET");
+const SHOPIFY_STORE_URL = getEnvVar("SHOPIFY_STORE_URL");
+const SHOPIFY_ACCESS_TOKEN = getEnvVar("SHOPIFY_ACCESS_TOKEN");
 
 export const shopify = shopifyApi({
     apiSecretKey: API_SECRET,
