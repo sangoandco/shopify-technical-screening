@@ -107,6 +107,8 @@ export const fetchProducts = async (_req: Request, res: Response): Promise<Respo
 
 export const comparePrices = async (newResponse: any): Promise<void> => {
     try {
+        logger.info("Webhook triggered:", JSON.stringify(newResponse, null, 2));
+
         const currentPricesPath = path.join(getCurrentDir(), '../assets/current-prices.json');
         const currentPricesData = fs.readFileSync(currentPricesPath, 'utf-8');
         const currentPrices = JSON.parse(currentPricesData);
@@ -142,11 +144,11 @@ export const comparePrices = async (newResponse: any): Promise<void> => {
 
         if (priceUpdated) {
             fs.writeFileSync(currentPricesPath, JSON.stringify(currentPrices, null, 2), 'utf-8');
-            console.log("Updated current-prices.json");
+            logger.info("Updated current-prices.json");
         }
 
     } catch (error) {
-        console.error("Error reading current prices or comparing prices:", error);
+        logger.error("Error reading current prices or comparing prices:", error);
     }
 }
 
